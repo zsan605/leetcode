@@ -1,31 +1,27 @@
 package problems
 
-// func reverseKGroup(head *models.ListNode, k int) *models.ListNode {
+import "leetcode/models"
 
-// 	p1, p2 := head, head
+func reverseKGroup(head *models.ListNode, k int) *models.ListNode {
 
-// 	for i := 1; i < k; i++ {
-// 		if p2 == nil {
-// 			reverseList()
-// 		}
-// 		p2 = p2.Next
-// 	}
-// 	return head
-// }
+	if head == nil || head.Next == nil {
+		return head
+	}
 
-// func reverseList(head *models.ListNode) *models.ListNode {
+	p1 := head
+	i := 1
+	for i = 1; i < k && p1 != nil; i++ {
+		p1 = p1.Next
+	}
 
-// 	if head == nil {
-// 		return nil
-// 	}
+	if k == i && p1 != nil {
+		p2 := p1.Next
+		p1.Next = nil
+		temp := reverseList(head)
+		head.Next = reverseKGroup(p2, k)
+		return temp
+	} else {
+		return head
+	}
 
-// 	p1, p2 := head, head.Next
-
-// 	for p2 != nil {
-// 		temp := p2.Next
-// 		p2.Next = p1
-// 		p1 = p2
-// 		p2 = temp
-// 	}
-// 	return p1
-// }
+}
