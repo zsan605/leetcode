@@ -1,12 +1,10 @@
 package problems
 
-import "leetcode/models"
-
 /*
 	双指针p1,p2
 	每次移动两个节点
 */
-func swapPairs(head *models.ListNode) *models.ListNode {
+func swapPairs(head *ListNode) *ListNode {
 
 	if head == nil {
 		return nil

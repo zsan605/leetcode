@@ -1,7 +1,5 @@
 package problems
 
-import "leetcode/models"
-
 /*
 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
 
@@ -34,9 +32,9 @@ import "leetcode/models"
 	5. 结果比最长的长
 */
 
-func addTwoNumbers(l1 *models.ListNode, l2 *models.ListNode) *models.ListNode {
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
-	var tempNode = new(models.ListNode)
+	var tempNode = new(ListNode)
 	var head = tempNode
 	var decade, unit int
 	for l1 != nil || l2 != nil {
@@ -56,13 +54,13 @@ func addTwoNumbers(l1 *models.ListNode, l2 *models.ListNode) *models.ListNode {
 		tempNode.Val = unit
 
 		if l1 != nil || l2 != nil {
-			tempNode.Next = new(models.ListNode)
+			tempNode.Next = new(ListNode)
 			tempNode = tempNode.Next
 		}
 	}
 
 	if decade != 0 {
-		tempNode.Next = new(models.ListNode)
+		tempNode.Next = new(ListNode)
 		tempNode.Next.Val = decade
 	}
 	return head

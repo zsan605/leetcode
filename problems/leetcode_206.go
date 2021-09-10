@@ -1,8 +1,6 @@
 package problems
 
-import "leetcode/models"
-
-func reverseList(head *models.ListNode) *models.ListNode {
+func reverseList(head *ListNode) *ListNode {
 
 	if head == nil || head.Next == nil {
 		return head

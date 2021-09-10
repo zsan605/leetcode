@@ -1,14 +1,12 @@
 package problems
 
-import "leetcode/models"
-
 /*
 双指针解法
 p1 = head
 p2 = head+n
 当p2到链表结尾，p1刚好到到时第n个
 */
-func removeNthFromEnd(head *models.ListNode, n int) *models.ListNode {
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	if head == nil {
 		return nil
 	}

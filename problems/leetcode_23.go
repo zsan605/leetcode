@@ -1,12 +1,10 @@
 package problems
 
-import "leetcode/models"
-
 /*
 前提：合并两个有序链表
 方法：归并
 */
-func mergeKLists(lists []*models.ListNode) *models.ListNode {
+func mergeKLists(lists []*ListNode) *ListNode {
 
 	if len(lists) == 0 {
 		return nil
@@ -22,7 +20,7 @@ func mergeKLists(lists []*models.ListNode) *models.ListNode {
 	return merge(lists, 0, len(lists)-1)
 }
 
-func merge(lists []*models.ListNode, l, r int) *models.ListNode {
+func merge(lists []*ListNode, l, r int) *ListNode {
 	if l == r {
 		return lists[l]
 	}

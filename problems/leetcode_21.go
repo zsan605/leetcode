@@ -1,7 +1,5 @@
 package problems
 
-import "leetcode/models"
-
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -15,7 +13,7 @@ import "leetcode/models"
  遍历一个链表，向另一个链表中插入
 
 */
-func mergeTwoLists(l1 *models.ListNode, l2 *models.ListNode) *models.ListNode {
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	if l1 == nil {
 		return l2
@@ -25,7 +23,7 @@ func mergeTwoLists(l1 *models.ListNode, l2 *models.ListNode) *models.ListNode {
 		return l1
 	}
 
-	var hL, pL, tL *models.ListNode
+	var hL, pL, tL *ListNode
 
 	if l1.Val <= l2.Val {
 		hL = l1

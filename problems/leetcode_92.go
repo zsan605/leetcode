@@ -1,10 +1,6 @@
 package problems
 
-import (
-	"leetcode/models"
-)
-
-func reverseBetween(head *models.ListNode, left int, right int) *models.ListNode {
+func reverseBetween(head *ListNode, left int, right int) *ListNode {
 
 	if head == nil {
 		return nil
@@ -36,7 +32,7 @@ func reverseBetween(head *models.ListNode, left int, right int) *models.ListNode
 	return head
 }
 
-func reverseBetween1(head *models.ListNode, left int, right int) *models.ListNode {
+func reverseBetween1(head *ListNode, left int, right int) *ListNode {
 
 	if head == nil {
 		return nil

@@ -1,8 +1,6 @@
 package problems
 
-import "leetcode/models"
-
-func lowestCommonAncestor(root, p, q *models.TreeNode) *models.TreeNode {
+func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}

@@ -1,5 +1,7 @@
 package problems
 
+import "math"
+
 /*
 给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。
 
@@ -30,5 +32,27 @@ package problems
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 func reverse(x int) int {
-	return 0
+	//if x >math.MaxInt32{
+	//	return 0
+	//}
+	var ret = 0
+	var flag = 1
+	if x < 0 {
+		flag = -1
+	}
+	for x%10 != 0 {
+		ret = ret*10 + x%10
+		x = x / 10
+
+		if flag ==-1{
+			if ret < (math.MaxInt32 +1) * flag{
+				return  0
+			}
+		} else {
+			if ret > math.MaxInt32{
+				return 0
+			}
+		}
+	}
+	return ret
 }

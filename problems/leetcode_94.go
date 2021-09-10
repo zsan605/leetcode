@@ -1,11 +1,9 @@
 package problems
 
-import "leetcode/models"
-
 /*
 	给定一个二叉树的根节点 root ，返回它的 中序 遍历。
 */
-func inorderTraversal(root *models.TreeNode) []int {
+func inorderTraversal(root *TreeNode) []int {
 	if root == nil {
 		return nil
 	}
@@ -23,7 +21,7 @@ func inorderTraversal(root *models.TreeNode) []int {
 	return nodes
 }
 
-func inorderTraversal1(root *models.TreeNode) []int {
+func inorderTraversal1(root *TreeNode) []int {
 	if root == nil {
 		return nil
 	}

@@ -1,8 +1,6 @@
 package problems
 
-import "leetcode/models"
-
-func reverseKGroup(head *models.ListNode, k int) *models.ListNode {
+func reverseKGroup(head *ListNode, k int) *ListNode {
 
 	if head == nil || head.Next == nil {
 		return head

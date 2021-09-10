@@ -1,12 +1,10 @@
 package problems
 
-import "leetcode/models"
-
 /*
 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
 */
 
-func getIntersectionNode(headA, headB *models.ListNode) *models.ListNode {
+func getIntersectionNode(headA, headB *ListNode) *ListNode {
 
 	if headA == nil || headB == nil {
 		return nil
