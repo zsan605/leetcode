@@ -14,13 +14,13 @@ package problems
 */
 func jump(nums []int) int {
 
-	for i := len(nums) - 1; i >= 0; i-- {
+	// for i := len(nums) - 1; i >= 0; i-- {
 
-		ln := i - j
-		for j := 0; j < i; j++ {
-			if j+nums[j] >= i
-		}
-	}
+	// 	ln := i - j
+	// 	for j := 0; j < i; j++ {
+	// 		if j+nums[j] >= i
+	// 	}
+	// }
 
 	return 0
 }
